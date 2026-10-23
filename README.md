@@ -29,9 +29,9 @@ Repo GitHub : [`lecodeur228/drecio-web-admin`](https://github.com/lecodeur228/dr
 1. Vercel → **Add New Project** → importer `lecodeur228/drecio-web-admin`.
 2. Framework : Next.js · Install / Build via `vercel.json`.
 3. Variables : copie [`.env.vercel.example`](./.env.vercel.example) (Production + Preview).
-4. Point crucial :
+4. Point crucial : l’URL de base de l’API se configure via la variable d’environnement serveur `FASTAPI_URL` (Production + Preview). Ne pas la committer.
    ```
-   FASTAPI_URL=https://drecio-fastapi-2f683991.fastapicloud.dev
+   FASTAPI_URL=<API base URL>
    ```
 5. Après le 1er deploy, mets `NEXT_PUBLIC_APP_URL` (admin) et `NEXT_PUBLIC_SELLER_APP_URL` (studio).
 6. Ajoute l’origine admin dans `CORS_ORIGINS` côté FastAPI Cloud (voir README studio).
